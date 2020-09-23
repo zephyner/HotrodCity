@@ -1,17 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController characterController;
-    public float speed = 10;
+    public float speed; //Floating point variable to store the player's movement speed.
+    private Rigidbody rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
-    void Update()
+    // Use this for initialization
+    void Start()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        
+        //Get and store a reference to the Rigidbody2D component so that we can access it.
+        rb2d = GetComponent<Rigidbody>();
+        speed = 15f;
+    }
+
+    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
+    void FixedUpdate()
+    {
+        //Store the current horizontal input in the float moveHorizontal.
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        //Store the current vertical input in the float moveVertical.
+        float moveVertical = Input.GetAxis("Vertical");
+
+        //Use the two store floats to create a new Vector2 variable movement.
+        Vector3 movement = transform.right * moveHorizontal + transform.forward * moveVertical;
+
+        //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
+        rb2d.AddForce(movement * speed);
     }
 }
+
