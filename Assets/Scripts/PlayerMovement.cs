@@ -1,35 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed; //Floating point variable to store the player's movement speed.
-    private Rigidbody rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
+    public float EngineForce, SteeringForce, BrakingForce;
+    public WheelCollider FD_Wheel, FP_Wheel, RD_Wheel, RP_Wheel;
 
-    // Use this for initialization
     void Start()
     {
-        //Get and store a reference to the Rigidbody2D component so that we can access it.
-        rb2d = GetComponent<Rigidbody>();
-        speed = 15f;
+       
     }
-
-    //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
-    void FixedUpdate()
+    void Update()
     {
-        //Store the current horizontal input in the float moveHorizontal.
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        //WASD inputs
+        float vertical = Input.GetAxis("Vertical") * EngineForce;
+        float horizontal = Input.GetAxis("Horizontal") * SteeringForce;
 
-        //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis("Vertical");
+        //rear wheel 
+        RD_Wheel.motorTorque = vertical;
+        RP_Wheel.motorTorque = vertical;
 
-        //Use the two store floats to create a new Vector2 variable movement.
-        Vector3 movement = transform.right * moveHorizontal + transform.forward * moveVertical;
+        //Front wheel
+        FD_Wheel.steerAngle = horizontal;
+        FP_Wheel.steerAngle = horizontal;
 
-        //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        rb2d.AddForce(movement * speed);
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            RD_Wheel.brakeTorque = BrakingForce;
+            RP_Wheel.brakeTorque = BrakingForce;
+        }
+        
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            RD_Wheel.brakeTorque = 0f;
+            RP_Wheel.brakeTorque = 0f;
+        }
+
+    }
+    private void FixedUpdate()
+    {
     }
 }
 
