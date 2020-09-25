@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public float EngineForce, SteeringForce, BrakingForce;
     public WheelCollider FD_Wheel, FP_Wheel, RD_Wheel, RP_Wheel;
+    public Rigidbody rb;
 
     void Start()
     {
-       
+      
     }
     void Update()
     {
