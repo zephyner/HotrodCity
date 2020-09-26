@@ -12,6 +12,12 @@ public class CarMovement : MonoBehaviour
         //A and D keys
         horizontalInput = Input.GetAxis("Horizontal");
         //W and S keys
+        verticalInput = Input.GetAxis("Vertical");
+    }
+
+    private void Steering()
+    {
+        steeringAng = maxSteerAngle * horizontalInput;
         frontDriverWhee.steerAngle = steeringAng;
         frontPassengerWhee.steerAngle = steeringAng; 
     }
