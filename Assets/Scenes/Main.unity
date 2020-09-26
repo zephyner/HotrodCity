@@ -245,17 +245,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 54550418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330081059e1213747a8c7a4ed6931272, type: 3}
+  m_Script: {fileID: 11500000, guid: a4071ce2c9387d64fb2876a407d4b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngineForce: 100
-  SteeringForce: 50
-  BrakingForce: 100
-  FD_Wheel: {fileID: 323885543}
-  FP_Wheel: {fileID: 234980700}
-  RD_Wheel: {fileID: 2087377970}
-  RP_Wheel: {fileID: 1581051166}
-  rb: {fileID: 0}
+  frontDriverWhee: {fileID: 323885543}
+  frontPassengerWhee: {fileID: 234980700}
+  rearDriverWhee: {fileID: 2087377970}
+  rearPassengerWhee: {fileID: 1581051166}
+  frontDriverTran: {fileID: 55034808}
+  frontPassengerTran: {fileID: 55034810}
+  rearDriverTran: {fileID: 55034814}
+  rearPassengerTran: {fileID: 55034812}
+  maxSteerAngle: 30
+  motorForce: 50
 --- !u!1 &54550424
 GameObject:
   m_ObjectHideFlags: 0
