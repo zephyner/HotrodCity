@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-      
+
     }
     void Update()
     {
@@ -28,13 +28,13 @@ public class PlayerMovement : MonoBehaviour
         FD_Wheel.steerAngle = horizontal;
         FP_Wheel.steerAngle = horizontal;
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             RD_Wheel.brakeTorque = BrakingForce;
             RP_Wheel.brakeTorque = BrakingForce;
         }
-        
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             RD_Wheel.brakeTorque = 0f;
             RP_Wheel.brakeTorque = 0f;

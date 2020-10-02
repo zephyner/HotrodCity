@@ -19,7 +19,7 @@ public class CarMovement : MonoBehaviour
     {
         steeringAng = maxSteerAngle * horizontalInput;
         frontDriverWhee.steerAngle = steeringAng;
-        frontPassengerWhee.steerAngle = steeringAng; 
+        frontPassengerWhee.steerAngle = steeringAng;
     }
 
     private void Acceleration()

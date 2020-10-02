@@ -208,6 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 55034800}
+  - component: {fileID: 54550417}
   m_Layer: 0
   m_Name: Pcar
   m_TagString: Untagged
@@ -215,6 +216,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &54550417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54550416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4071ce2c9387d64fb2876a407d4b9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontDriverWhee: {fileID: 323885543}
+  frontPassengerWhee: {fileID: 234980700}
+  rearDriverWhee: {fileID: 2087377970}
+  rearPassengerWhee: {fileID: 1581051166}
+  frontDriverTran: {fileID: 0}
+  frontPassengerTran: {fileID: 0}
+  rearDriverTran: {fileID: 0}
+  rearPassengerTran: {fileID: 0}
+  maxSteerAngle: 30
+  motorForce: 50
 --- !u!1 &54550418
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,14 +271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4071ce2c9387d64fb2876a407d4b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontDriverWhee: {fileID: 323885543}
-  frontPassengerWhee: {fileID: 234980700}
-  rearDriverWhee: {fileID: 2087377970}
-  rearPassengerWhee: {fileID: 1581051166}
-  frontDriverTran: {fileID: 55034808}
-  frontPassengerTran: {fileID: 55034810}
-  rearDriverTran: {fileID: 55034814}
-  rearPassengerTran: {fileID: 55034812}
+  frontDriverWhee: {fileID: 0}
+  frontPassengerWhee: {fileID: 0}
+  rearDriverWhee: {fileID: 0}
+  rearPassengerWhee: {fileID: 0}
+  frontDriverTran: {fileID: 0}
+  frontPassengerTran: {fileID: 0}
+  rearDriverTran: {fileID: 0}
+  rearPassengerTran: {fileID: 0}
   maxSteerAngle: 30
   motorForce: 50
 --- !u!1 &54550424
