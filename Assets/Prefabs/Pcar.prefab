@@ -654,12 +654,13 @@ MonoBehaviour:
   frontPassengerWhee: {fileID: 403250817254980832}
   rearDriverWhee: {fileID: 403250816480519566}
   rearPassengerWhee: {fileID: 403250815913104546}
-  frontDriverTran: {fileID: 0}
-  frontPassengerTran: {fileID: 0}
-  rearDriverTran: {fileID: 0}
-  rearPassengerTran: {fileID: 0}
+  frontDriverTran: {fileID: 403250817300707844}
+  frontPassengerTran: {fileID: 403250817300707846}
+  rearDriverTran: {fileID: 403250817300707842}
+  rearPassengerTran: {fileID: 403250817300707840}
   maxSteerAngle: 30
   motorForce: 50
+  carMass: -0.9
 --- !u!114 &6138371514459226826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,16 +836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4071ce2c9387d64fb2876a407d4b9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontDriverWhee: {fileID: 0}
-  frontPassengerWhee: {fileID: 0}
-  rearDriverWhee: {fileID: 0}
-  rearPassengerWhee: {fileID: 0}
-  frontDriverTran: {fileID: 0}
-  frontPassengerTran: {fileID: 0}
-  rearDriverTran: {fileID: 0}
-  rearPassengerTran: {fileID: 0}
+  frontDriverWhee: {fileID: 403250817031856219}
+  frontPassengerWhee: {fileID: 403250817254980832}
+  rearDriverWhee: {fileID: 403250816480519566}
+  rearPassengerWhee: {fileID: 403250815913104546}
+  frontDriverTran: {fileID: 403250817300707844}
+  frontPassengerTran: {fileID: 403250817300707846}
+  rearDriverTran: {fileID: 403250817300707842}
+  rearPassengerTran: {fileID: 403250817300707840}
   maxSteerAngle: 30
   motorForce: 50
+  carMass: -0.9
 --- !u!1 &403250817470485709
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,30 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
+
+    private float horizontalInput;
+    private float verticalInput;
+    //steering will work with the horizontalInput
+    private float steeringAng;
+
+    public WheelCollider frontDriverWhee, frontPassengerWhee;
+    public WheelCollider rearDriverWhee, rearPassengerWhee;
+    //Modifies the rotation of the wheels
+    public Transform frontDriverTran, frontPassengerTran;
+    public Transform rearDriverTran, rearPassengerTran;
+
+    //How fast the car can U-Turn
+    public float maxSteerAngle = 30;
+    //How fast the car can go
+    public float motorForce = 50;
+
+    public float carMass = -0.9f;
+
+    public void Start()
+    {
+        GetComponent<Rigidbody>().centerOfMass = new Vector3(0f, carMass, 0f);
+    }
+
     public void GetInput()
     {
         //A and D keys
@@ -56,19 +80,7 @@ public class CarMovement : MonoBehaviour
         UpdateWheelPoses();
     }
 
-    private float horizontalInput;
-    private float verticalInput;
-    //steering will work with the horizontalInput
-    private float steeringAng;
+    
 
-    public WheelCollider frontDriverWhee, frontPassengerWhee;
-    public WheelCollider rearDriverWhee, rearPassengerWhee;
-    //Modifies the rotation of the wheels
-    public Transform frontDriverTran, frontPassengerTran;
-    public Transform rearDriverTran, rearPassengerTran;
-
-    //How fast the car can U-Turn
-    public float maxSteerAngle = 30;
-    //How fast the car can go
-    public float motorForce = 50;
+    
 }
