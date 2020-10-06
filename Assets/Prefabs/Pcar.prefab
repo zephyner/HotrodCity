@@ -612,10 +612,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403250817300707852}
-  - component: {fileID: 403250817301194285}
   - component: {fileID: 6138371514459226826}
   - component: {fileID: 7194032642191333324}
-  - component: {fileID: 1406928368747095216}
   m_Layer: 0
   m_Name: Pcar
   m_TagString: Untagged
@@ -638,29 +636,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &403250817301194285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403250817301194284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4071ce2c9387d64fb2876a407d4b9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frontDriverWhee: {fileID: 403250817031856219}
-  frontPassengerWhee: {fileID: 403250817254980832}
-  rearDriverWhee: {fileID: 403250816480519566}
-  rearPassengerWhee: {fileID: 403250815913104546}
-  frontDriverTran: {fileID: 403250817300707844}
-  frontPassengerTran: {fileID: 403250817300707846}
-  rearDriverTran: {fileID: 403250817300707842}
-  rearPassengerTran: {fileID: 403250817300707840}
-  maxSteerAngle: 30
-  motorForce: 50
-  carMass: -0.9
 --- !u!114 &6138371514459226826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,20 +670,6 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
---- !u!114 &1406928368747095216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403250817301194284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7adaa4076f1d9334e898b1fde4071e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!1 &403250817301194286
 GameObject:
   m_ObjectHideFlags: 0
