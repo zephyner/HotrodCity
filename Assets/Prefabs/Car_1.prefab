@@ -329,10 +329,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5526338119299866318}
+  - component: {fileID: 6700681292280941863}
   - component: {fileID: 4535926236285840808}
   - component: {fileID: 683383947816730248}
   - component: {fileID: 5101477096223420287}
-  - component: {fileID: 5132736888397934612}
   m_Layer: 0
   m_Name: Car_1
   m_TagString: Untagged
@@ -358,6 +358,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6700681292280941863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523079670533474942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563d7d029798e724697c7cbc5d13569b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontDriverWhee: {fileID: 5521468501721621091}
+  frontPassengerWhee: {fileID: 5521468501721621089}
+  rearDriverWhee: {fileID: 5521468501721621090}
+  rearPassengerWhee: {fileID: 5521468501721621088}
+  frontDriverTran: {fileID: 3843537294187398214}
+  frontPassengerTran: {fileID: 3432025052734824424}
+  rearDriverTran: {fileID: 5271721263643091376}
+  rearPassengerTran: {fileID: 2000628168242903665}
+  maxSteerAngle: 30
+  motorForce: 50
+  carMass: -0.9
 --- !u!114 &4535926236285840808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,29 +428,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   currentMatchDebug: 
---- !u!114 &5132736888397934612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5523079670533474942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563d7d029798e724697c7cbc5d13569b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frontDriverWhee: {fileID: 5521468501721621091}
-  frontPassengerWhee: {fileID: 5521468501721621089}
-  rearDriverWhee: {fileID: 5521468501721621090}
-  rearPassengerWhee: {fileID: 5521468501721621088}
-  frontDriverTran: {fileID: 3843537294187398214}
-  frontPassengerTran: {fileID: 3843537294187398214}
-  rearDriverTran: {fileID: 5271721263643091376}
-  rearPassengerTran: {fileID: 2000628168242903665}
-  maxSteerAngle: 30
-  motorForce: 50
-  carMass: -0.9
 --- !u!1 &5523153227000609970
 GameObject:
   m_ObjectHideFlags: 0
